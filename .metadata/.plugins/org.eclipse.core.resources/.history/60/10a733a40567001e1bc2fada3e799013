@@ -1,0 +1,18 @@
+package br.com.joaoldantasn.todolist.controllers;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.joaoldantasn.todolist.model.User;
+
+@RestController
+@RequestMapping("/users")
+public class UserController {
+	
+	
+	public void create(@RequestBody User user) {
+		
+	}
+	
+}
