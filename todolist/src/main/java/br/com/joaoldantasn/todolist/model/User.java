@@ -1,20 +1,40 @@
 package br.com.joaoldantasn.todolist.model;
 
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity(name = "tb_users")
 public class User {
+	
+	@Id
+	@GeneratedValue(generator = "UUID")
+	private UUID id;
 	
 	private String username;
 	private String name;
 	private String password;
 	
+	@CreationTimestamp
+	private LocalDateTime createdAt;
+	
 	public User() {
 		
 	}
-	
-	public User(String username, String name, String password) {
+
+	public User(UUID id, String username, String name, String password, LocalDateTime createdAt) {
+		this.id = id;
 		this.username = username;
 		this.name = name;
 		this.password = password;
+		this.createdAt = createdAt;
 	}
+
 	public String getUsername() {
 		return username;
 	}
@@ -33,5 +53,23 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public UUID getId() {
+		return id;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+	}
+	
+	
 	
 }
