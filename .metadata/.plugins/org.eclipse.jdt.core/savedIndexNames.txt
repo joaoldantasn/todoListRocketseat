@@ -75,7 +75,6 @@ INDEX VERSION 1.132+C:\workspace\SpringRocketseat\.metadata\.plugins\org.eclipse
 628321985.index
 1956070670.index
 1501039982.index
-3389034366.index
 446412707.index
 2606573545.index
 3758732986.index
